@@ -29,7 +29,7 @@
                     <ul>
                         <li>
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name" name="f_name">
+                            <input type="text" id="first_name" " name="f_name">
                         </li>
                         <li>
                             <label for="last_name">LAST NAME</label>
@@ -45,16 +45,16 @@
                         </li>
                         <li>
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" required id="password" name="password" onkeyup="pass()">
                         </li>
                         <li>
                             <label for="confirm_pw">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm_pw" name="confirm_pw">
+                            <input type="password" required id="confirm_pw" name="confirm_pw" onkeyup="pass()">
                         </li>
                     </ul>
                     
                 </fieldset>
-                <button type="submit">Create Account</button>
+                <button type="submit" id="submit" disabled>Create Account</button>
             </form>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>

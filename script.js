@@ -3,11 +3,10 @@ function pass() {
     let confirm_pw = document.getElementById('confirm_pw').value;
     let button = document.getElementById('submit');
     if (password === confirm_pw && button.hasAttribute('disabled') == true) {
-        button.removeAttribute('disabled');
-
+        if (password.length > 0 && confirm_pw.length > 0) {
+            button.removeAttribute('disabled');
+        }
     } else if (password !== confirm_pw && button.hasAttribute('disabled') == false) {
         button.setAttribute('disabled', '');
     }
 };
-
-//The validation does not work if the user enters something and deleted both fields: empty = empty so it unlocks the button, need to trigger if the fields are not empty
